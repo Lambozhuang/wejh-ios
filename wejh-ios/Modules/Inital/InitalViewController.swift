@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  InitalViewController.swift
 //  wejh-ios
 //
 //  Created by Bunny Wong on 2020/5/1.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class InitialViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()

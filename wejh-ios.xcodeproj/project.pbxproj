@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		385F620AC1A3FDFE34188351 /* Pods_wejh_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F095845897A76AA02DC3C971 /* Pods_wejh_ios.framework */; };
 		716645EE245C105F00A244F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716645ED245C105F00A244F5 /* AppDelegate.swift */; };
-		716645F2245C105F00A244F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716645F1245C105F00A244F5 /* ViewController.swift */; };
 		716645F5245C105F00A244F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716645F3245C105F00A244F5 /* Main.storyboard */; };
 		716645F7245C106100A244F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716645F6245C106100A244F5 /* Assets.xcassets */; };
 		716645FA245C106100A244F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716645F8245C106100A244F5 /* LaunchScreen.storyboard */; };
+		71D0FE00245C3F9C005717EC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FDFF245C3F9C005717EC /* Application.swift */; };
+		71D0FE02245C3FAB005717EC /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE01245C3FAB005717EC /* Navigator.swift */; };
+		71D0FE05245C4131005717EC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE04245C4131005717EC /* HomeViewModel.swift */; };
+		71D0FE08245C473F005717EC /* InitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE07245C473F005717EC /* InitalViewController.swift */; };
+		71D0FE0A245C47E3005717EC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE09245C47E3005717EC /* HomeViewController.swift */; };
+		71D0FE0C245C4FAC005717EC /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE0B245C4FAC005717EC /* ViewControllerType.swift */; };
+		71D0FE0E245C4FEE005717EC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE0D245C4FEE005717EC /* ViewModelType.swift */; };
+		B99F6A4C459335A580EB8C73 /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F658E36E98DDB8C071FE6 /* StoryboardInstantiatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		716645EA245C105F00A244F5 /* wejh-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wejh-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		716645ED245C105F00A244F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		716645F1245C105F00A244F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		716645F4245C105F00A244F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		716645F6245C106100A244F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716645F9245C106100A244F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716645FB245C106100A244F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71D0FDFF245C3F9C005717EC /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		71D0FE01245C3FAB005717EC /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		71D0FE04245C4131005717EC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		71D0FE07245C473F005717EC /* InitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitalViewController.swift; sourceTree = "<group>"; };
+		71D0FE09245C47E3005717EC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		71D0FE0B245C4FAC005717EC /* ViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
+		71D0FE0D245C4FEE005717EC /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		8C457D80C85075B66E7EA11E /* Pods-wejh-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wejh-ios.release.xcconfig"; path = "Target Support Files/Pods-wejh-ios/Pods-wejh-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B99F658E36E98DDB8C071FE6 /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
 		BF781242D4F467449515F49B /* Pods-wejh-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wejh-ios.debug.xcconfig"; path = "Target Support Files/Pods-wejh-ios/Pods-wejh-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		F095845897A76AA02DC3C971 /* Pods_wejh_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wejh_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,8 +91,6 @@
 				71D0FDF8245C247B005717EC /* Modules */,
 				71D0FDFD245C2611005717EC /* Services */,
 				71D0FDFE245C2625005717EC /* Resources */,
-				716645ED245C105F00A244F5 /* AppDelegate.swift */,
-				716645F1245C105F00A244F5 /* ViewController.swift */,
 				716645F3245C105F00A244F5 /* Main.storyboard */,
 				716645F6245C106100A244F5 /* Assets.xcassets */,
 				716645F8245C106100A244F5 /* LaunchScreen.storyboard */,
@@ -90,6 +102,9 @@
 		71D0FDF6245C2470005717EC /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				716645ED245C105F00A244F5 /* AppDelegate.swift */,
+				71D0FDFF245C3F9C005717EC /* Application.swift */,
+				71D0FE01245C3FAB005717EC /* Navigator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -104,6 +119,8 @@
 		71D0FDF8245C247B005717EC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				71D0FE06245C4731005717EC /* Inital */,
+				71D0FE03245C4125005717EC /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -111,6 +128,9 @@
 		71D0FDFA245C25AA005717EC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				71D0FE0B245C4FAC005717EC /* ViewControllerType.swift */,
+				71D0FE0D245C4FEE005717EC /* ViewModelType.swift */,
+				B99F658E36E98DDB8C071FE6 /* StoryboardInstantiatable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -141,6 +161,23 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		71D0FE03245C4125005717EC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				71D0FE04245C4131005717EC /* HomeViewModel.swift */,
+				71D0FE09245C47E3005717EC /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		71D0FE06245C4731005717EC /* Inital */ = {
+			isa = PBXGroup;
+			children = (
+				71D0FE07245C473F005717EC /* InitalViewController.swift */,
+			);
+			path = Inital;
 			sourceTree = "<group>";
 		};
 		E45EB7BC1C1681BED4EBC035 /* Pods */ = {
@@ -286,8 +323,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				716645F2245C105F00A244F5 /* ViewController.swift in Sources */,
+				71D0FE00245C3F9C005717EC /* Application.swift in Sources */,
+				71D0FE02245C3FAB005717EC /* Navigator.swift in Sources */,
+				71D0FE08245C473F005717EC /* InitalViewController.swift in Sources */,
+				71D0FE0C245C4FAC005717EC /* ViewControllerType.swift in Sources */,
+				71D0FE05245C4131005717EC /* HomeViewModel.swift in Sources */,
+				71D0FE0A245C47E3005717EC /* HomeViewController.swift in Sources */,
 				716645EE245C105F00A244F5 /* AppDelegate.swift in Sources */,
+				71D0FE0E245C4FEE005717EC /* ViewModelType.swift in Sources */,
+				B99F6A4C459335A580EB8C73 /* StoryboardInstantiatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
