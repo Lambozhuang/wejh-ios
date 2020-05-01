@@ -1,0 +1,5 @@
+app_identifier("cn.gettoset.wejh-ios")
+apple_id("bunnnywong@outlook.com")
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
