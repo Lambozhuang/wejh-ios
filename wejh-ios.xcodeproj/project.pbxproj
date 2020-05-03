@@ -262,10 +262,9 @@
 			};
 			buildConfigurationList = 716645E5245C105F00A244F5 /* Build configuration list for PBXProject "wejh-ios" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 				"zh-Hans",
 			);
