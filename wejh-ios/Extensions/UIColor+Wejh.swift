@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UIColor_Hex_Swift
 
 extension UIColor {
 
