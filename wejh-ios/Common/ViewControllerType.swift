@@ -22,6 +22,12 @@ class BaseViewController<ViewModel: ViewModelType>: UIViewController, Navigable 
     super.init(coder: coder)
   }
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupUI()
+    bindToViewModel()
+  }
+
   func connect(viewModel: ViewModel?, navigator: Navigator) {
     self.viewModel = viewModel
     self.navigator = navigator

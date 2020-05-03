@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     guard let window = window else {
       fatalError("Application should have a window.Application")
     }
+    Application.shared.setupThirdPartyLibs()
     Application.shared.presentHomeScene(in: window)
 
     return true

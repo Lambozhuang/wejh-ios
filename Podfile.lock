@@ -1,38 +1,79 @@
 PODS:
   - Alamofire (5.1.0)
+  - FluentDarkModeKit (0.5.1)
   - KeychainAccess (4.2.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - RxViewController (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - SnapKit (5.0.1)
   - SwiftLint (0.39.2)
+  - WhatsNewKit (1.3.3)
 
 DEPENDENCIES:
+  - FluentDarkModeKit
   - KeychainAccess (~> 4.0)
   - Moya/RxSwift (~> 14.0)
+  - "NSObject+Rx (~> 5.0)"
+  - RxCocoa (~> 5.0)
+  - RxSwift (~> 5.0)
+  - RxSwiftExt (~> 5.0)
+  - RxViewController (~> 1.0)
   - SnapKit (~> 5.0)
   - SwiftLint (= 0.39.2)
+  - WhatsNewKit (~> 1.3)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FluentDarkModeKit
     - KeychainAccess
     - Moya
+    - "NSObject+Rx"
+    - RxCocoa
+    - RxRelay
     - RxSwift
+    - RxSwiftExt
+    - RxViewController
     - SnapKit
     - SwiftLint
+    - WhatsNewKit
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  FluentDarkModeKit: cf3b931435f191b1a0451802fd479c8993c529e8
   KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  WhatsNewKit: 3cbe30a202cc387086a977deba52af50f61c656f
 
-PODFILE CHECKSUM: 841a0be92c4b2f1d8df37fb698971e8f0994fe6b
+PODFILE CHECKSUM: a70d44f9331c8d42437f3fab493c32285142303e
 
 COCOAPODS: 1.9.1

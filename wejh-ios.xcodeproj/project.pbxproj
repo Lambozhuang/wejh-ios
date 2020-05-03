@@ -8,10 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		385F620AC1A3FDFE34188351 /* Pods_wejh_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F095845897A76AA02DC3C971 /* Pods_wejh_ios.framework */; };
+		713A2DF4245C6DF70006DB35 /* WhatsNewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713A2DF3245C6DF70006DB35 /* WhatsNewProvider.swift */; };
+		713A2DF8245C70F50006DB35 /* whats-new.json in Resources */ = {isa = PBXBuildFile; fileRef = 713A2DFA245C70F50006DB35 /* whats-new.json */; };
+		71482175245ECBAA007A476A /* UIColor+Wejh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71482174245ECBAA007A476A /* UIColor+Wejh.swift */; };
+		71484BBC245E746100A4B3B6 /* UIScreen+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */; };
+		71484BBE245E820000A4B3B6 /* InterfaceStylePreferenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484BBD245E820000A4B3B6 /* InterfaceStylePreferenceService.swift */; };
+		71484BC0245E8E2200A4B3B6 /* ObservableType+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484BBF245E8E2200A4B3B6 /* ObservableType+Operators.swift */; };
 		716645EE245C105F00A244F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716645ED245C105F00A244F5 /* AppDelegate.swift */; };
 		716645F5245C105F00A244F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716645F3245C105F00A244F5 /* Main.storyboard */; };
 		716645F7245C106100A244F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716645F6245C106100A244F5 /* Assets.xcassets */; };
 		716645FA245C106100A244F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716645F8245C106100A244F5 /* LaunchScreen.storyboard */; };
+		71CAD340245EFFC500F0B3BB /* UIColor+HexValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CAD33F245EFFC500F0B3BB /* UIColor+HexValues.swift */; };
 		71D0FE00245C3F9C005717EC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FDFF245C3F9C005717EC /* Application.swift */; };
 		71D0FE02245C3FAB005717EC /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE01245C3FAB005717EC /* Navigator.swift */; };
 		71D0FE05245C4131005717EC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE04245C4131005717EC /* HomeViewModel.swift */; };
@@ -19,16 +26,25 @@
 		71D0FE0A245C47E3005717EC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE09245C47E3005717EC /* HomeViewController.swift */; };
 		71D0FE0C245C4FAC005717EC /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE0B245C4FAC005717EC /* ViewControllerType.swift */; };
 		71D0FE0E245C4FEE005717EC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE0D245C4FEE005717EC /* ViewModelType.swift */; };
+		B99F69676655BA9641C3CBE2 /* InterfaceStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F62F7238B0EB9EF1696E7 /* InterfaceStyleProvider.swift */; };
 		B99F6A4C459335A580EB8C73 /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F658E36E98DDB8C071FE6 /* StoryboardInstantiatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		713A2DF3245C6DF70006DB35 /* WhatsNewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewProvider.swift; sourceTree = "<group>"; };
+		713A2DF9245C70F50006DB35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = "Base.lproj/whats-new.json"; sourceTree = "<group>"; };
+		713A2DFB245C70F80006DB35 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hans"; path = "zh-Hans.lproj/whats-new.json"; sourceTree = "<group>"; };
+		71482174245ECBAA007A476A /* UIColor+Wejh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Wejh.swift"; sourceTree = "<group>"; };
+		71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Rx.swift"; sourceTree = "<group>"; };
+		71484BBD245E820000A4B3B6 /* InterfaceStylePreferenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceStylePreferenceService.swift; sourceTree = "<group>"; };
+		71484BBF245E8E2200A4B3B6 /* ObservableType+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Operators.swift"; sourceTree = "<group>"; };
 		716645EA245C105F00A244F5 /* wejh-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wejh-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		716645ED245C105F00A244F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		716645F4245C105F00A244F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		716645F6245C106100A244F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716645F9245C106100A244F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716645FB245C106100A244F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71CAD33F245EFFC500F0B3BB /* UIColor+HexValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexValues.swift"; sourceTree = "<group>"; };
 		71D0FDFF245C3F9C005717EC /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		71D0FE01245C3FAB005717EC /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		71D0FE04245C4131005717EC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -37,6 +53,7 @@
 		71D0FE0B245C4FAC005717EC /* ViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
 		71D0FE0D245C4FEE005717EC /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		8C457D80C85075B66E7EA11E /* Pods-wejh-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wejh-ios.release.xcconfig"; path = "Target Support Files/Pods-wejh-ios/Pods-wejh-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B99F62F7238B0EB9EF1696E7 /* InterfaceStyleProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceStyleProvider.swift; sourceTree = "<group>"; };
 		B99F658E36E98DDB8C071FE6 /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
 		BF781242D4F467449515F49B /* Pods-wejh-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wejh-ios.debug.xcconfig"; path = "Target Support Files/Pods-wejh-ios/Pods-wejh-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		F095845897A76AA02DC3C971 /* Pods_wejh_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wejh_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +79,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		71484BBA245E744B00A4B3B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				71482174245ECBAA007A476A /* UIColor+Wejh.swift */,
+				71CAD33F245EFFC500F0B3BB /* UIColor+HexValues.swift */,
+				71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */,
+				71484BBF245E8E2200A4B3B6 /* ObservableType+Operators.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		716645E1245C105F00A244F5 = {
 			isa = PBXGroup;
 			children = (
@@ -83,10 +111,11 @@
 		716645EC245C105F00A244F5 /* wejh-ios */ = {
 			isa = PBXGroup;
 			children = (
+				71484BBA245E744B00A4B3B6 /* Extensions */,
 				71D0FDF6245C2470005717EC /* Application */,
 				71D0FDFA245C25AA005717EC /* Common */,
 				71D0FDFB245C25EC005717EC /* Configs */,
-				71D0FDF7245C2476005717EC /* Managers */,
+				71D0FDF7245C2476005717EC /* Providers */,
 				71D0FDFC245C25FC005717EC /* Models */,
 				71D0FDF8245C247B005717EC /* Modules */,
 				71D0FDFD245C2611005717EC /* Services */,
@@ -109,11 +138,13 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		71D0FDF7245C2476005717EC /* Managers */ = {
+		71D0FDF7245C2476005717EC /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				713A2DF3245C6DF70006DB35 /* WhatsNewProvider.swift */,
+				B99F62F7238B0EB9EF1696E7 /* InterfaceStyleProvider.swift */,
 			);
-			path = Managers;
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		71D0FDF8245C247B005717EC /* Modules */ = {
@@ -152,6 +183,7 @@
 		71D0FDFD245C2611005717EC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				71484BBD245E820000A4B3B6 /* InterfaceStylePreferenceService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -159,6 +191,7 @@
 		71D0FDFE245C2625005717EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				713A2DFA245C70F50006DB35 /* whats-new.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -196,8 +229,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716645FE245C106100A244F5 /* Build configuration list for PBXNativeTarget "wejh-ios" */;
 			buildPhases = (
-				71D0FDF9245C2507005717EC /* Run SwiftLint */,
 				DFE443AAFA1149B4D01B6276 /* [CP] Check Pods Manifest.lock */,
+				71D0FDF9245C2507005717EC /* Run SwiftLint */,
 				716645E6245C105F00A244F5 /* Sources */,
 				716645E7245C105F00A244F5 /* Frameworks */,
 				716645E8245C105F00A244F5 /* Resources */,
@@ -234,6 +267,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 716645E1245C105F00A244F5;
 			productRefGroup = 716645EB245C105F00A244F5 /* Products */;
@@ -250,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713A2DF8245C70F50006DB35 /* whats-new.json in Resources */,
 				716645FA245C106100A244F5 /* LaunchScreen.storyboard in Resources */,
 				716645F7245C106100A244F5 /* Assets.xcassets in Resources */,
 				716645F5245C105F00A244F5 /* Main.storyboard in Resources */,
@@ -324,20 +359,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				71D0FE00245C3F9C005717EC /* Application.swift in Sources */,
+				71482175245ECBAA007A476A /* UIColor+Wejh.swift in Sources */,
 				71D0FE02245C3FAB005717EC /* Navigator.swift in Sources */,
 				71D0FE08245C473F005717EC /* InitalViewController.swift in Sources */,
 				71D0FE0C245C4FAC005717EC /* ViewControllerType.swift in Sources */,
 				71D0FE05245C4131005717EC /* HomeViewModel.swift in Sources */,
+				71484BBC245E746100A4B3B6 /* UIScreen+Rx.swift in Sources */,
 				71D0FE0A245C47E3005717EC /* HomeViewController.swift in Sources */,
 				716645EE245C105F00A244F5 /* AppDelegate.swift in Sources */,
+				713A2DF4245C6DF70006DB35 /* WhatsNewProvider.swift in Sources */,
 				71D0FE0E245C4FEE005717EC /* ViewModelType.swift in Sources */,
+				71484BC0245E8E2200A4B3B6 /* ObservableType+Operators.swift in Sources */,
 				B99F6A4C459335A580EB8C73 /* StoryboardInstantiatable.swift in Sources */,
+				71484BBE245E820000A4B3B6 /* InterfaceStylePreferenceService.swift in Sources */,
+				B99F69676655BA9641C3CBE2 /* InterfaceStyleProvider.swift in Sources */,
+				71CAD340245EFFC500F0B3BB /* UIColor+HexValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		713A2DFA245C70F50006DB35 /* whats-new.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713A2DF9245C70F50006DB35 /* Base */,
+				713A2DFB245C70F80006DB35 /* zh-Hans */,
+			);
+			name = "whats-new.json";
+			sourceTree = "<group>";
+		};
 		716645F3245C105F00A244F5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -421,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

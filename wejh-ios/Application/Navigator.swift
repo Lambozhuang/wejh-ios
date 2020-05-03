@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WhatsNewKit
 
 protocol Navigable {
   var navigator: Navigator! { get }
@@ -18,6 +19,7 @@ final class Navigator {
 
   enum Scene {
     case home(viewModel: HomeViewModel)
+    case whatsNew(traits: WhatsNewTraits)
   }
 
   enum SceneTransitionType {
@@ -57,6 +59,9 @@ final class Navigator {
       let vc = nc.viewControllers.first as! HomeViewController
       vc.connect(viewModel: viewModel, navigator: self)
       return nc
+    case .whatsNew(traits: (let items, let configuration, let versionStore)):
+      let whatsNewController = WhatsNewViewController(whatsNew: items, configuration: configuration, versionStore: versionStore)
+      return whatsNewController
     }
   }
 
