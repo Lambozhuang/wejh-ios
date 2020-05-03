@@ -11,7 +11,7 @@ import UIKit
 extension UIColor {
 
   static var primaryPink: UIColor = {
-    return UIColor(displayP3Red: 0.85, green: 0.41, blue: 0.57, alpha: 1.00)
+    return UIColor("#D96891", displayP3: true)
   }()
 
 }
