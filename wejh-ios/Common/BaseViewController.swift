@@ -10,7 +10,7 @@ import UIKit
 
 class BaseViewController<ViewModel: ViewModelType>: UIViewController, NavigableControllerType {
 
-  var navigator: Navigator!
+  private(set) var navigator: Navigator!
   var viewModel: ViewModel?
 
   required init(viewModel: ViewModel, navigator: Navigator) {
@@ -29,12 +29,17 @@ class BaseViewController<ViewModel: ViewModelType>: UIViewController, NavigableC
   }
 
   func connect(viewModel: ViewModel?, navigator: Navigator) {
-    self.viewModel = viewModel
     self.navigator = navigator
+    connect(viewModel: viewModel)
+  }
+
+  func connect(viewModel: ViewModel?) {
+    self.viewModel = viewModel
+    bindToViewModel()
   }
 
   func setupUI() {
-    
+
   }
 
   func bindToViewModel() {

@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import RxSwiftExt
 
-final class HomeViewModel: ViewModelType {
+final class HomeViewModel: ComplexViewModelType {
 
   struct Input {
     let whatsNewTrigger: Observable<Void>

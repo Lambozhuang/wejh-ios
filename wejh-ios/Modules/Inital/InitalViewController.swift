@@ -1,5 +1,5 @@
 //
-//  InitalViewController.swift
+//  InitialViewController.swift
 //  wejh-ios
 //
 //  Created by Bunny Wong on 2020/5/1.

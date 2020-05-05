@@ -8,12 +8,9 @@
 
 import UIKit
 
-protocol NavigableControllerType: UIViewController {
+protocol NavigableControllerType: UIViewController, ViewModelBindableType {
 
-  associatedtype ViewModel: ViewModelType
-
-  var navigator: Navigator! { get set }
-  var viewModel: ViewModel? { get set }
+  var navigator: Navigator! { get }
 
   init(viewModel: ViewModel, navigator: Navigator)
 
@@ -24,10 +21,12 @@ protocol NavigableControllerType: UIViewController {
 /// Dummy type for `Navigator.Scene` enum, since swift compiler has to determine the whole type regarding of which case used
 class DummyNavigable: UIViewController, NavigableControllerType {
 
+  typealias ViewModel = DummyViewModel
+
   var navigator: Navigator!
   var viewModel: DummyViewModel?
 
-  required init(viewModel: DummyViewModel, navigator: Navigator) {
+  required init(viewModel: ViewModel, navigator: Navigator) {
     fatalError("init(viewModel:, navigator:) has not been implemented")
   }
 
@@ -35,23 +34,19 @@ class DummyNavigable: UIViewController, NavigableControllerType {
     fatalError("init(coder:) has not been implemented")
   }
 
-  func connect(viewModel: DummyViewModel?, navigator: Navigator) {
+  func connect(viewModel: ViewModel?, navigator: Navigator) {
     fatalError("connect(viewModel:, navigator:) has not been implemented")
   }
 
-  typealias ViewModel = DummyViewModel
+  func connect(viewModel: DummyViewModel?) {
 
-  class DummyViewModel: ViewModelType {
+  }
 
-    func transform(input: Input) -> Output {
-      fatalError("transform(input:) has not been implemented")
-    }
+  func bindToViewModel() {
 
-    struct Input {
-    }
+  }
 
-    struct Output {
-    }
+  struct DummyViewModel: ViewModelType {
 
   }
 

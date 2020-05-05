@@ -9,14 +9,14 @@
 import RxSwift
 import RxCocoa
 
-final class UserViewModel: ViewModelType {
+final class UserViewModel: ComplexViewModelType {
 
   struct Input {
 
   }
 
   struct Output {
-    
+
   }
 
   func transform(input: Input) -> Output {

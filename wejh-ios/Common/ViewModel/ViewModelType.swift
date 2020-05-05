@@ -8,6 +8,10 @@
 
 protocol ViewModelType {
 
+}
+
+protocol ComplexViewModelType: ViewModelType {
+
   associatedtype Input
   associatedtype Output
 

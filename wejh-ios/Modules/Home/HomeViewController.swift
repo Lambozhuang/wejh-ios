@@ -97,7 +97,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         else {
       return nil
     }
-
     return view
   }
 

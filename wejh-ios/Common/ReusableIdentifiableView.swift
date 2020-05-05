@@ -6,7 +6,6 @@
 //  Copyright © 2020 Bunny Wong. All rights reserved.
 //
 
-
 import UIKit
 
 protocol ReusableIdentifiableView: UIView {
