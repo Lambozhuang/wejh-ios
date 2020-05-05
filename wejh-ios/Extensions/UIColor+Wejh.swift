@@ -18,4 +18,8 @@ extension UIColor {
     return UIColor("#252450", displayP3: true)
   }()
 
+  static var shadowBlack: UIColor = {
+    return UIColor("#2D2C4E", displayP3: true)
+  }()
+
 }

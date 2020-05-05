@@ -6,7 +6,7 @@
 import RxSwift
 import RxRelay
 
-final class HomeTodayCellCardViewModel: ViewModelType {
+final class HomeTodayCellCardViewModel: HomeTodayCellViewModel {
 
   let balance = BehaviorRelay<String?>(value: nil)
 

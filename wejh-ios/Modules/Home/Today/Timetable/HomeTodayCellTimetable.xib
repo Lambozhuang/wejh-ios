@@ -68,7 +68,7 @@
             <connections>
                 <outlet property="todayCurriculumTableView" destination="985-uQ-KHQ" id="0Vy-vs-jRY"/>
             </connections>
-            <point key="canvasLocation" x="-13.043478260869566" y="46.875"/>
+            <point key="canvasLocation" x="-9" y="48"/>
         </tableViewCell>
     </objects>
 </document>

@@ -10,10 +10,10 @@ target 'wejh-ios' do
   pod 'RxCocoa', '~> 5.0' # https://github.com/ReactiveX/RxSwift
 
   # Rx Extensions
-  # pod 'RxDataSources', '~> 4.0' # https://github.com/RxSwiftCommunity/RxDataSources
   pod 'RxSwiftExt', '~> 5.0' # https://github.com/RxSwiftCommunity/RxSwiftExt
-  pod 'NSObject+Rx', '~> 5.0' # https://github.com/RxSwiftCommunity/NSObject-Rx
   pod 'RxViewController', '~> 1.0' # https://github.com/devxoul/RxViewController
+  pod 'NSObject+Rx', '~> 5.0' # https://github.com/RxSwiftCommunity/NSObject-Rx
+  pod 'RxDataSources', '~> 4.0' # https://github.com/RxSwiftCommunity/RxDataSources
   # pod 'RxGesture', '~> 3.0' # https://github.com/RxSwiftCommunity/RxGesture
   # pod 'RxOptional', '~> 4.0' # https://github.com/RxSwiftCommunity/RxOptional
 

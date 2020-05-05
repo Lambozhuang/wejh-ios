@@ -35,7 +35,6 @@ class BaseViewController<ViewModel: ViewModelType>: UIViewController, NavigableC
 
   func connect(viewModel: ViewModel?) {
     self.viewModel = viewModel
-    bindToViewModel()
   }
 
   func setupUI() {

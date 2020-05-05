@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  wejh-ios
+
+  Created by Bunny Wong on 2020/5/5.
+  Copyright © 2020 Bunny Wong. All rights reserved.
+*/
+
+"home-today-card-title" = "校园卡";
+"home-today-card-subtitle" = "当前余额";
+"home-today-card-unit" = "元";

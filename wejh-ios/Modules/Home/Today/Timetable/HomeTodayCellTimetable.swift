@@ -14,10 +14,6 @@ final class HomeTodayCellTimetable: HomeTodayCellBase<HomeTodayCellTimetableView
 
   @IBOutlet weak var todayCurriculumTableView: UITableView!
 
-  override func connect(viewModel: HomeTodayCellTimetableViewModel?) {
-
-  }
-
   override func bindToViewModel() {
 
   }

@@ -19,11 +19,11 @@ final class HomeTodayCellCard: HomeTodayCellBase<HomeTodayCellCardViewModel>, In
   @IBOutlet weak var balanceLabel: UILabel!
   @IBOutlet weak var balanceUnitLabel: UILabel!
 
-  func setupUI() {
-  }
-
-  override func connect(viewModel: HomeTodayCellCardViewModel?) {
-
+  override func setupUI() {
+    super.setupUI()
+    titleLabel.text = "home-today-card-title".localized
+    subtitleLabel.text = "home-today-card-subtitle".localized
+    balanceUnitLabel.text = "home-today-card-unit".localized
   }
 
   override func bindToViewModel() {

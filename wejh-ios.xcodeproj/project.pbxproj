@@ -11,9 +11,12 @@
 		71251E31246160EF0066C4D2 /* HomeTodayCellTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71251E30246160EF0066C4D2 /* HomeTodayCellTimetable.swift */; };
 		71251E342461616A0066C4D2 /* HomeTodayCellCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71251E332461616A0066C4D2 /* HomeTodayCellCard.swift */; };
 		71251E36246162E20066C4D2 /* HomeTodayCellTimeTableEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71251E35246162E20066C4D2 /* HomeTodayCellTimeTableEventCell.swift */; };
+		71251E392461807C0066C4D2 /* HomeTodayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71251E382461807C0066C4D2 /* HomeTodayCellViewModel.swift */; };
 		7138543224612EEE00C2E87B /* UITableview+InstantiableIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138543124612EEE00C2E87B /* UITableview+InstantiableIdentifiable.swift */; };
 		713A2DF4245C6DF70006DB35 /* WhatsNewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713A2DF3245C6DF70006DB35 /* WhatsNewProvider.swift */; };
 		713A2DF8245C70F50006DB35 /* whats-new.json in Resources */ = {isa = PBXBuildFile; fileRef = 713A2DFA245C70F50006DB35 /* whats-new.json */; };
+		713E11F024619C3800596290 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 713E11EE24619C3800596290 /* Localizable.strings */; };
+		713E11F324619C6500596290 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713E11F224619C6500596290 /* String+Localized.swift */; };
 		71482175245ECBAA007A476A /* UIColor+Wejh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71482174245ECBAA007A476A /* UIColor+Wejh.swift */; };
 		71484BBC245E746100A4B3B6 /* UIScreen+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */; };
 		71484BBE245E820000A4B3B6 /* InterfaceStylePreferenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484BBD245E820000A4B3B6 /* InterfaceStylePreferenceService.swift */; };
@@ -52,10 +55,14 @@
 		71251E30246160EF0066C4D2 /* HomeTodayCellTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayCellTimetable.swift; sourceTree = "<group>"; };
 		71251E332461616A0066C4D2 /* HomeTodayCellCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayCellCard.swift; sourceTree = "<group>"; };
 		71251E35246162E20066C4D2 /* HomeTodayCellTimeTableEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayCellTimeTableEventCell.swift; sourceTree = "<group>"; };
+		71251E382461807C0066C4D2 /* HomeTodayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayCellViewModel.swift; sourceTree = "<group>"; };
 		7138543124612EEE00C2E87B /* UITableview+InstantiableIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableview+InstantiableIdentifiable.swift"; sourceTree = "<group>"; };
 		713A2DF3245C6DF70006DB35 /* WhatsNewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewProvider.swift; sourceTree = "<group>"; };
 		713A2DF9245C70F50006DB35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = "Base.lproj/whats-new.json"; sourceTree = "<group>"; };
 		713A2DFB245C70F80006DB35 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hans"; path = "zh-Hans.lproj/whats-new.json"; sourceTree = "<group>"; };
+		713E11EF24619C3800596290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		713E11F124619C3E00596290 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		713E11F224619C6500596290 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		71482174245ECBAA007A476A /* UIColor+Wejh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Wejh.swift"; sourceTree = "<group>"; };
 		71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Rx.swift"; sourceTree = "<group>"; };
 		71484BBD245E820000A4B3B6 /* InterfaceStylePreferenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceStylePreferenceService.swift; sourceTree = "<group>"; };
@@ -137,8 +144,9 @@
 				71482174245ECBAA007A476A /* UIColor+Wejh.swift */,
 				71CAD33F245EFFC500F0B3BB /* UIColor+HexValues.swift */,
 				71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */,
-				71484BBF245E8E2200A4B3B6 /* ObservableType+Operators.swift */,
 				7138543124612EEE00C2E87B /* UITableview+InstantiableIdentifiable.swift */,
+				71484BBF245E8E2200A4B3B6 /* ObservableType+Operators.swift */,
+				713E11F224619C6500596290 /* String+Localized.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -173,9 +181,6 @@
 				71D0FDF8245C247B005717EC /* Modules */,
 				71D0FDFD245C2611005717EC /* Services */,
 				71D0FDFE245C2625005717EC /* Resources */,
-				716645F3245C105F00A244F5 /* Main.storyboard */,
-				716645F6245C106100A244F5 /* Assets.xcassets */,
-				716645F8245C106100A244F5 /* LaunchScreen.storyboard */,
 				716645FB245C106100A244F5 /* Info.plist */,
 			);
 			path = "wejh-ios";
@@ -266,7 +271,11 @@
 		71D0FDFE245C2625005717EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				713E11EE24619C3800596290 /* Localizable.strings */,
 				713A2DFA245C70F50006DB35 /* whats-new.json */,
+				716645F3245C105F00A244F5 /* Main.storyboard */,
+				716645F6245C106100A244F5 /* Assets.xcassets */,
+				716645F8245C106100A244F5 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -275,8 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				716A05B12460227E004C6CBA /* Views */,
-				71D0FE04245C4131005717EC /* HomeViewModel.swift */,
 				71D0FE09245C47E3005717EC /* HomeViewController.swift */,
+				71D0FE04245C4131005717EC /* HomeViewModel.swift */,
 				B99F69C68796640B78D82FF5 /* Today */,
 			);
 			path = Home;
@@ -304,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				B99F68E230A1CF26E1396049 /* HomeTodayCell.swift */,
+				71251E382461807C0066C4D2 /* HomeTodayCellViewModel.swift */,
 				B99F6C1E96EFAF2CAFB67B79 /* Timetable */,
 				B99F68E4EB03E27EB5C5636C /* Card */,
 				71251E322461613B0066C4D2 /* Library */,
@@ -405,6 +415,7 @@
 				716645FA245C106100A244F5 /* LaunchScreen.storyboard in Resources */,
 				71C3CB5F245FF1D000512E97 /* SectionHeaderView.xib in Resources */,
 				716645F7245C106100A244F5 /* Assets.xcassets in Resources */,
+				713E11F024619C3800596290 /* Localizable.strings in Resources */,
 				716645F5245C105F00A244F5 /* Main.storyboard in Resources */,
 				B99F6921CF4E1A2DE926D612 /* HomeTodayCellTimetableEvent.xib in Resources */,
 				B99F673BC27E7BB88EAA0DE4 /* HomeTodayCellTimetable.xib in Resources */,
@@ -487,7 +498,9 @@
 				71D0FE05245C4131005717EC /* HomeViewModel.swift in Sources */,
 				71484BBC245E746100A4B3B6 /* UIScreen+Rx.swift in Sources */,
 				71D0FE0A245C47E3005717EC /* HomeViewController.swift in Sources */,
+				71251E392461807C0066C4D2 /* HomeTodayCellViewModel.swift in Sources */,
 				716645EE245C105F00A244F5 /* AppDelegate.swift in Sources */,
+				713E11F324619C6500596290 /* String+Localized.swift in Sources */,
 				713A2DF4245C6DF70006DB35 /* WhatsNewProvider.swift in Sources */,
 				71C3CB61245FF23D00512E97 /* SectionHeaderView.swift in Sources */,
 				71484BC0245E8E2200A4B3B6 /* ObservableType+Operators.swift in Sources */,
@@ -522,6 +535,15 @@
 				713A2DFB245C70F80006DB35 /* zh-Hans */,
 			);
 			name = "whats-new.json";
+			sourceTree = "<group>";
+		};
+		713E11EE24619C3800596290 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713E11EF24619C3800596290 /* Base */,
+				713E11F124619C3E00596290 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		716645F3245C105F00A244F5 /* Main.storyboard */ = {

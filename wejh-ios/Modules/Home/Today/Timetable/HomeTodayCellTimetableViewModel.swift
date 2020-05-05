@@ -5,6 +5,6 @@
 
 import RxSwift
 
-final class HomeTodayCellTimetableViewModel: HomeTodayCellBase<HomeTodayCellTimetableViewModel>, ViewModelType {
+final class HomeTodayCellTimetableViewModel: HomeTodayCellViewModel {
 
 }

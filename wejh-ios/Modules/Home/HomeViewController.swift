@@ -11,6 +11,7 @@ import SnapKit
 import RxSwift
 import RxViewController
 import NSObject_Rx
+import RxDataSources
 
 extension UIColor {
 
@@ -32,10 +33,10 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
   private var navigationButtonUser: UIBarButtonItem!
 
   override func setupUI() {
-    tableView = UITableView()
+    tableView = UITableView(frame: .zero, style: .grouped)
 
-    tableView.delegate = self
-    tableView.dataSource = self
+    tableView.separatorColor = .clear
+    tableView.backgroundColor = .clear
 
     view.addSubview(tableView)
     tableView.snp.makeConstraints { constraint in
@@ -66,6 +67,7 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
     guard let viewModel = viewModel else {
       return
     }
+
     let input = HomeViewModel.Input(whatsNewTrigger: rx.viewDidAppear.map({ _ in }), userSceneTrigger: navigationButtonUser.rx.tap)
     let output = viewModel.transform(input: input)
 
@@ -84,38 +86,30 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
       let targetScene = Navigator.Scene<UserViewController>.navigable(viewModel: viewModel)
       self.navigator.transition(to: targetScene, type: .modal(), sender: self)
     }).disposed(by: rx.disposeBag)
+
+    let dataSource = RxTableViewSectionedReloadDataSource<HomeTodaySectionModel>(configureCell: { _, tableView, _, item in
+      if let cardViewModel = item as? HomeTodayCellCardViewModel {
+        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTodayCellCard.reuseIdentifier) as! HomeTodayCellCard
+        cell.connect(viewModel: cardViewModel)
+        return cell
+      } else {
+        fatalError("Unrecognized cell type")
+      }
+    })
+
+    tableView.rx.setDelegate(self).disposed(by: rx.disposeBag)
+
+    DispatchQueue.main.async {
+      output.todaySecion.asObservable().bind(to: self.tableView.rx.items(dataSource: dataSource)).disposed(by: self.rx.disposeBag)
+    }
   }
 
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate {
 
-  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    guard let view = tableView.dequeueReusableHeaderFooterView(
-        withIdentifier: SectionHeaderView.reuseIdentifier)
-        as? SectionHeaderView
-        else {
-      return nil
-    }
-    return view
-  }
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if indexPath.row % 2 == 0 {
-      let cell = tableView.dequeueReusableCell(withIdentifier: HomeTodayCellTimetable.reuseIdentifier)!
-      return cell
-    } else {
-      let cell = tableView.dequeueReusableCell(withIdentifier: HomeTodayCellCard.reuseIdentifier)!
-      return cell
-    }
-  }
-
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 100
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 156.0
   }
 
 }
