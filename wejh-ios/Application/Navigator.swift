@@ -9,56 +9,55 @@
 import UIKit
 import WhatsNewKit
 
-protocol Navigable {
-  var navigator: Navigator! { get }
-}
-
 final class Navigator {
 
   static let `default` = Navigator()
 
-  enum Scene {
-    case home(viewModel: HomeViewModel)
+  enum Scene<Navigable: NavigableControllerType> {
+    case navigable(viewModel: Navigable.ViewModel)
     case whatsNew(traits: WhatsNewTraits)
   }
 
   enum SceneTransitionType {
-    case root(in: UIWindow)
+    case root(in: UIWindow, embedInNavigation: Bool = true)
     case push
-    case modal
+    case modal(embedInNavigation: Bool = true)
   }
 
   lazy var mainStoryboard: UIStoryboard = {
     return UIStoryboard(name: "Main", bundle: nil)
   }()
 
-  func transition(to scene: Scene, type: SceneTransitionType, sender: UIViewController?) {
+  func transition<Navigable: NavigableControllerType>(to scene: Scene<Navigable>, type: SceneTransitionType, sender: UIViewController?) {
     guard let destinationController = getViewController(for: scene) else {
       return
     }
     switch type {
-    case .root(let window):
-      window.rootViewController = getViewController(for: scene)
+    case .root(let window, let embedInNavigation):
+      window.rootViewController = embedInNavigation ? UINavigationController(rootViewController: destinationController) : destinationController
     case .push:
       guard let navigationController = sender as? UINavigationController else {
         return
       }
       navigationController.pushViewController(destinationController, animated: true)
-    case .modal:
+    case .modal(let embedInNavigation):
       guard let sender = sender else {
         return
       }
-      sender.present(destinationController, animated: true, completion: nil)
+      let destination = embedInNavigation ? UINavigationController(rootViewController: destinationController) : destinationController
+      sender.present(destination, animated: true, completion: nil)
     }
   }
 
-  func getViewController(for scene: Scene) -> UIViewController? {
+}
+
+extension Navigator {
+
+  func getViewController<Navigable: NavigableControllerType>(for scene: Scene<Navigable>) -> UIViewController? {
     switch scene {
-    case .home(let viewModel):
-      let nc = HomeViewController.instance(for: mainStoryboard) as! UINavigationController
-      let vc = nc.viewControllers.first as! HomeViewController
-      vc.connect(viewModel: viewModel, navigator: self)
-      return nc
+    case .navigable(let viewModel):
+      let vc = Navigable.init(viewModel: viewModel, navigator: self)
+      return vc
     case .whatsNew(traits: (let items, let configuration, let versionStore)):
       let whatsNewController = WhatsNewViewController(whatsNew: items, configuration: configuration, versionStore: versionStore)
       return whatsNewController

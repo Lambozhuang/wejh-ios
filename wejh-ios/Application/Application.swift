@@ -37,7 +37,9 @@ final class Application {
 
   func presentHomeScene(in window: UIWindow) {
     let homeViewModel = HomeViewModel()
-    navigator.transition(to: .home(viewModel: homeViewModel), type: .root(in: window), sender: nil)
+
+    let targetScene = Navigator.Scene<HomeViewController>.navigable(viewModel: homeViewModel)
+    navigator.transition(to: targetScene, type: .root(in: window, embedInNavigation: true), sender: nil)
   }
 
 }

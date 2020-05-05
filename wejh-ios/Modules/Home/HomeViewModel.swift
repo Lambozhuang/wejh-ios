@@ -10,19 +10,23 @@ import RxSwift
 import RxCocoa
 import RxSwiftExt
 
-class HomeViewModel: ViewModelType {
+final class HomeViewModel: ViewModelType {
 
   struct Input {
     let whatsNewTrigger: Observable<Void>
+    let userSceneTrigger: ControlEvent<Void>
   }
 
   struct Output {
     let presentWhatsNew: Driver<WhatsNewTraits?>
+    let presentUserScene: Driver<UserViewModel>
   }
 
   func transform(input: Input) -> Output {
-    let whatsNewTraits = input.whatsNewTrigger.take(1).map( { WhatsNewProvider.default.traits() } )
-    return Output(presentWhatsNew: whatsNewTraits.asDriver(onErrorJustReturn: nil))
+    let whatsNewTraits = input.whatsNewTrigger.map({ return WhatsNewProvider.default.traits() })
+    let userViewModel = input.userSceneTrigger.map({ return UserViewModel() })
+    return Output(presentWhatsNew: whatsNewTraits.asDriverOnErrorJustComplete(),
+        presentUserScene: userViewModel.asDriverOnErrorJustComplete())
   }
 
 }

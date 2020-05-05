@@ -1,5 +1,5 @@
 //
-//  StoryboardInstantiatable.swift
+//  StoryboardInstantiable.swift
 //  wejh-ios
 //
 //  Created by Bunny Wong on 2020/5/1.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol StoryboardInstantiatable {
+protocol StoryboardInstantiatable: UIViewController {
 
   static var storyboardIdentifier: String { get }
 
 }
 
-extension StoryboardInstantiatable where Self: UIViewController {
+extension StoryboardInstantiatable {
 
   static func instance(for storyboard: UIStoryboard) -> UIViewController {
     return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier)

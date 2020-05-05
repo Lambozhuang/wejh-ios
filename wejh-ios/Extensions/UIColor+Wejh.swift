@@ -14,4 +14,8 @@ extension UIColor {
     return UIColor("#D96891", displayP3: true)
   }()
 
+  static var primaryBlack: UIColor = {
+    return UIColor("#252450", displayP3: true)
+  }()
+
 }

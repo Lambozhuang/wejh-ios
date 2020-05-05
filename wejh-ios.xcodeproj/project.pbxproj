@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		385F620AC1A3FDFE34188351 /* Pods_wejh_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F095845897A76AA02DC3C971 /* Pods_wejh_ios.framework */; };
+		7138542C24612D5400C2E87B /* HomeTodayCellTimetable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7138542B24612D5400C2E87B /* HomeTodayCellTimetable.xib */; };
+		7138542E24612D6700C2E87B /* HomeTodayCellTimetableEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7138542D24612D6700C2E87B /* HomeTodayCellTimetableEvent.xib */; };
+		7138543024612D7F00C2E87B /* HomeTodayCellCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7138542F24612D7F00C2E87B /* HomeTodayCellCard.xib */; };
+		7138543224612EEE00C2E87B /* UITableview+InstantiableIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138543124612EEE00C2E87B /* UITableview+InstantiableIdentifiable.swift */; };
 		713A2DF4245C6DF70006DB35 /* WhatsNewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713A2DF3245C6DF70006DB35 /* WhatsNewProvider.swift */; };
 		713A2DF8245C70F50006DB35 /* whats-new.json in Resources */ = {isa = PBXBuildFile; fileRef = 713A2DFA245C70F50006DB35 /* whats-new.json */; };
 		71482175245ECBAA007A476A /* UIColor+Wejh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71482174245ECBAA007A476A /* UIColor+Wejh.swift */; };
@@ -18,19 +22,31 @@
 		716645F5245C105F00A244F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716645F3245C105F00A244F5 /* Main.storyboard */; };
 		716645F7245C106100A244F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716645F6245C106100A244F5 /* Assets.xcassets */; };
 		716645FA245C106100A244F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716645F8245C106100A244F5 /* LaunchScreen.storyboard */; };
+		718C134724606C8B000817B2 /* HomeTodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C134624606C8B000817B2 /* HomeTodayCell.swift */; };
+		719E53A124604C2000186C98 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E53A024604C2000186C98 /* UserViewController.swift */; };
+		719E53A424604C5900186C98 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E53A324604C5900186C98 /* UserViewModel.swift */; };
+		71C3CB5F245FF1D000512E97 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C3CB5E245FF1D000512E97 /* SectionHeaderView.xib */; };
+		71C3CB61245FF23D00512E97 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C3CB60245FF23D00512E97 /* SectionHeaderView.swift */; };
 		71CAD340245EFFC500F0B3BB /* UIColor+HexValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CAD33F245EFFC500F0B3BB /* UIColor+HexValues.swift */; };
 		71D0FE00245C3F9C005717EC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FDFF245C3F9C005717EC /* Application.swift */; };
 		71D0FE02245C3FAB005717EC /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE01245C3FAB005717EC /* Navigator.swift */; };
 		71D0FE05245C4131005717EC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE04245C4131005717EC /* HomeViewModel.swift */; };
 		71D0FE08245C473F005717EC /* InitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE07245C473F005717EC /* InitalViewController.swift */; };
 		71D0FE0A245C47E3005717EC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE09245C47E3005717EC /* HomeViewController.swift */; };
-		71D0FE0C245C4FAC005717EC /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE0B245C4FAC005717EC /* ViewControllerType.swift */; };
+		71D0FE0C245C4FAC005717EC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE0B245C4FAC005717EC /* BaseViewController.swift */; };
 		71D0FE0E245C4FEE005717EC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0FE0D245C4FEE005717EC /* ViewModelType.swift */; };
+		B99F61DC747F15A49DEF07A0 /* NavigableControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F67D8CD05C2868BC0E541 /* NavigableControllerType.swift */; };
+		B99F67DA588C16ED5924B324 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F6332E56AB96D8E9EE6BD /* NibInstantiable.swift */; };
 		B99F69676655BA9641C3CBE2 /* InterfaceStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F62F7238B0EB9EF1696E7 /* InterfaceStyleProvider.swift */; };
-		B99F6A4C459335A580EB8C73 /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F658E36E98DDB8C071FE6 /* StoryboardInstantiatable.swift */; };
+		B99F6A4C459335A580EB8C73 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F658E36E98DDB8C071FE6 /* StoryboardInstantiable.swift */; };
+		B99F6F00C4FC32932B46FDE0 /* ReusableIdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F62844B47C44E7B2E48F2 /* ReusableIdentifiableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7138542B24612D5400C2E87B /* HomeTodayCellTimetable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTodayCellTimetable.xib; sourceTree = "<group>"; };
+		7138542D24612D6700C2E87B /* HomeTodayCellTimetableEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTodayCellTimetableEvent.xib; sourceTree = "<group>"; };
+		7138542F24612D7F00C2E87B /* HomeTodayCellCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTodayCellCard.xib; sourceTree = "<group>"; };
+		7138543124612EEE00C2E87B /* UITableview+InstantiableIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableview+InstantiableIdentifiable.swift"; sourceTree = "<group>"; };
 		713A2DF3245C6DF70006DB35 /* WhatsNewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewProvider.swift; sourceTree = "<group>"; };
 		713A2DF9245C70F50006DB35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = "Base.lproj/whats-new.json"; sourceTree = "<group>"; };
 		713A2DFB245C70F80006DB35 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hans"; path = "zh-Hans.lproj/whats-new.json"; sourceTree = "<group>"; };
@@ -44,17 +60,25 @@
 		716645F6245C106100A244F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716645F9245C106100A244F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716645FB245C106100A244F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		718C134624606C8B000817B2 /* HomeTodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayCell.swift; sourceTree = "<group>"; };
+		719E53A024604C2000186C98 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		719E53A324604C5900186C98 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		71C3CB5E245FF1D000512E97 /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
+		71C3CB60245FF23D00512E97 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		71CAD33F245EFFC500F0B3BB /* UIColor+HexValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexValues.swift"; sourceTree = "<group>"; };
 		71D0FDFF245C3F9C005717EC /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		71D0FE01245C3FAB005717EC /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		71D0FE04245C4131005717EC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		71D0FE07245C473F005717EC /* InitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitalViewController.swift; sourceTree = "<group>"; };
 		71D0FE09245C47E3005717EC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		71D0FE0B245C4FAC005717EC /* ViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
+		71D0FE0B245C4FAC005717EC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		71D0FE0D245C4FEE005717EC /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		8C457D80C85075B66E7EA11E /* Pods-wejh-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wejh-ios.release.xcconfig"; path = "Target Support Files/Pods-wejh-ios/Pods-wejh-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B99F62844B47C44E7B2E48F2 /* ReusableIdentifiableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableIdentifiableView.swift; sourceTree = "<group>"; };
 		B99F62F7238B0EB9EF1696E7 /* InterfaceStyleProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceStyleProvider.swift; sourceTree = "<group>"; };
-		B99F658E36E98DDB8C071FE6 /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
+		B99F6332E56AB96D8E9EE6BD /* NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
+		B99F658E36E98DDB8C071FE6 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		B99F67D8CD05C2868BC0E541 /* NavigableControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigableControllerType.swift; sourceTree = "<group>"; };
 		BF781242D4F467449515F49B /* Pods-wejh-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wejh-ios.debug.xcconfig"; path = "Target Support Files/Pods-wejh-ios/Pods-wejh-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		F095845897A76AA02DC3C971 /* Pods_wejh_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wejh_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,6 +110,7 @@
 				71CAD33F245EFFC500F0B3BB /* UIColor+HexValues.swift */,
 				71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */,
 				71484BBF245E8E2200A4B3B6 /* ObservableType+Operators.swift */,
+				7138543124612EEE00C2E87B /* UITableview+InstantiableIdentifiable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -128,12 +153,35 @@
 			path = "wejh-ios";
 			sourceTree = "<group>";
 		};
+		716A05B12460227E004C6CBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71C3CB60245FF23D00512E97 /* SectionHeaderView.swift */,
+				71C3CB5E245FF1D000512E97 /* SectionHeaderView.xib */,
+				718C134624606C8B000817B2 /* HomeTodayCell.swift */,
+				7138542B24612D5400C2E87B /* HomeTodayCellTimetable.xib */,
+				7138542D24612D6700C2E87B /* HomeTodayCellTimetableEvent.xib */,
+				7138542F24612D7F00C2E87B /* HomeTodayCellCard.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		719E53A224604C2400186C98 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				719E53A324604C5900186C98 /* UserViewModel.swift */,
+				719E53A024604C2000186C98 /* UserViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		71D0FDF6245C2470005717EC /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				716645ED245C105F00A244F5 /* AppDelegate.swift */,
 				71D0FDFF245C3F9C005717EC /* Application.swift */,
 				71D0FE01245C3FAB005717EC /* Navigator.swift */,
+				B99F67D8CD05C2868BC0E541 /* NavigableControllerType.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -150,6 +198,7 @@
 		71D0FDF8245C247B005717EC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				719E53A224604C2400186C98 /* User */,
 				71D0FE06245C4731005717EC /* Inital */,
 				71D0FE03245C4125005717EC /* Home */,
 			);
@@ -159,9 +208,11 @@
 		71D0FDFA245C25AA005717EC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				71D0FE0B245C4FAC005717EC /* ViewControllerType.swift */,
+				71D0FE0B245C4FAC005717EC /* BaseViewController.swift */,
 				71D0FE0D245C4FEE005717EC /* ViewModelType.swift */,
-				B99F658E36E98DDB8C071FE6 /* StoryboardInstantiatable.swift */,
+				B99F658E36E98DDB8C071FE6 /* StoryboardInstantiable.swift */,
+				B99F62844B47C44E7B2E48F2 /* ReusableIdentifiableView.swift */,
+				B99F6332E56AB96D8E9EE6BD /* NibInstantiable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -199,6 +250,7 @@
 		71D0FE03245C4125005717EC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				716A05B12460227E004C6CBA /* Views */,
 				71D0FE04245C4131005717EC /* HomeViewModel.swift */,
 				71D0FE09245C47E3005717EC /* HomeViewController.swift */,
 			);
@@ -285,6 +337,10 @@
 			files = (
 				713A2DF8245C70F50006DB35 /* whats-new.json in Resources */,
 				716645FA245C106100A244F5 /* LaunchScreen.storyboard in Resources */,
+				7138542C24612D5400C2E87B /* HomeTodayCellTimetable.xib in Resources */,
+				7138543024612D7F00C2E87B /* HomeTodayCellCard.xib in Resources */,
+				71C3CB5F245FF1D000512E97 /* SectionHeaderView.xib in Resources */,
+				7138542E24612D6700C2E87B /* HomeTodayCellTimetableEvent.xib in Resources */,
 				716645F7245C106100A244F5 /* Assets.xcassets in Resources */,
 				716645F5245C105F00A244F5 /* Main.storyboard in Resources */,
 			);
@@ -361,18 +417,26 @@
 				71482175245ECBAA007A476A /* UIColor+Wejh.swift in Sources */,
 				71D0FE02245C3FAB005717EC /* Navigator.swift in Sources */,
 				71D0FE08245C473F005717EC /* InitalViewController.swift in Sources */,
-				71D0FE0C245C4FAC005717EC /* ViewControllerType.swift in Sources */,
+				71D0FE0C245C4FAC005717EC /* BaseViewController.swift in Sources */,
 				71D0FE05245C4131005717EC /* HomeViewModel.swift in Sources */,
 				71484BBC245E746100A4B3B6 /* UIScreen+Rx.swift in Sources */,
 				71D0FE0A245C47E3005717EC /* HomeViewController.swift in Sources */,
 				716645EE245C105F00A244F5 /* AppDelegate.swift in Sources */,
 				713A2DF4245C6DF70006DB35 /* WhatsNewProvider.swift in Sources */,
+				71C3CB61245FF23D00512E97 /* SectionHeaderView.swift in Sources */,
+				718C134724606C8B000817B2 /* HomeTodayCell.swift in Sources */,
 				71D0FE0E245C4FEE005717EC /* ViewModelType.swift in Sources */,
 				71484BC0245E8E2200A4B3B6 /* ObservableType+Operators.swift in Sources */,
-				B99F6A4C459335A580EB8C73 /* StoryboardInstantiatable.swift in Sources */,
+				719E53A424604C5900186C98 /* UserViewModel.swift in Sources */,
+				7138543224612EEE00C2E87B /* UITableview+InstantiableIdentifiable.swift in Sources */,
+				B99F6A4C459335A580EB8C73 /* StoryboardInstantiable.swift in Sources */,
 				71484BBE245E820000A4B3B6 /* InterfaceStylePreferenceService.swift in Sources */,
 				B99F69676655BA9641C3CBE2 /* InterfaceStyleProvider.swift in Sources */,
 				71CAD340245EFFC500F0B3BB /* UIColor+HexValues.swift in Sources */,
+				B99F61DC747F15A49DEF07A0 /* NavigableControllerType.swift in Sources */,
+				719E53A124604C2000186C98 /* UserViewController.swift in Sources */,
+				B99F6F00C4FC32932B46FDE0 /* ReusableIdentifiableView.swift in Sources */,
+				B99F67DA588C16ED5924B324 /* NibInstantiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
