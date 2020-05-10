@@ -21,6 +21,8 @@
 		71484BBC245E746100A4B3B6 /* UIScreen+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */; };
 		71484BBE245E820000A4B3B6 /* InterfaceStylePreferenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484BBD245E820000A4B3B6 /* InterfaceStylePreferenceService.swift */; };
 		71484BC0245E8E2200A4B3B6 /* ObservableType+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484BBF245E8E2200A4B3B6 /* ObservableType+Operators.swift */; };
+		715A70402467C006000448AB /* HomeMenuItemEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 715A703F2467C006000448AB /* HomeMenuItemEmptyCell.xib */; };
+		715A70422467C025000448AB /* HomeMenuItemEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715A70412467C025000448AB /* HomeMenuItemEmptyCell.swift */; };
 		716645EE245C105F00A244F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716645ED245C105F00A244F5 /* AppDelegate.swift */; };
 		716645F5245C105F00A244F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716645F3245C105F00A244F5 /* Main.storyboard */; };
 		716645F7245C106100A244F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716645F6245C106100A244F5 /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Rx.swift"; sourceTree = "<group>"; };
 		71484BBD245E820000A4B3B6 /* InterfaceStylePreferenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceStylePreferenceService.swift; sourceTree = "<group>"; };
 		71484BBF245E8E2200A4B3B6 /* ObservableType+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Operators.swift"; sourceTree = "<group>"; };
+		715A703F2467C006000448AB /* HomeMenuItemEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuItemEmptyCell.xib; sourceTree = "<group>"; };
+		715A70412467C025000448AB /* HomeMenuItemEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuItemEmptyCell.swift; sourceTree = "<group>"; };
 		716645EA245C105F00A244F5 /* wejh-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wejh-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		716645ED245C105F00A244F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		716645F4245C105F00A244F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 				71C3CB5E245FF1D000512E97 /* HomeMenuView.xib */,
 				B99F6DE6A953ECC5AB208526 /* HomeMenuItemCell.swift */,
 				71AA7DAC24644BEB00AF653E /* HomeMenuItemCell.xib */,
+				715A70412467C025000448AB /* HomeMenuItemEmptyCell.swift */,
+				715A703F2467C006000448AB /* HomeMenuItemEmptyCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				715A70402467C006000448AB /* HomeMenuItemEmptyCell.xib in Resources */,
 				713A2DF8245C70F50006DB35 /* whats-new.json in Resources */,
 				716645FA245C106100A244F5 /* LaunchScreen.storyboard in Resources */,
 				71AA7DAD24644BEB00AF653E /* HomeMenuItemCell.xib in Resources */,
@@ -549,6 +556,7 @@
 				B99F66CA857C1E84F5E13642 /* ViewModelBindableType.swift in Sources */,
 				B99F697037030E01F7193020 /* HomeMenuItemCell.swift in Sources */,
 				B99F65197937FEFE8A33E471 /* SquareBlocksPatternView.swift in Sources */,
+				715A70422467C025000448AB /* HomeMenuItemEmptyCell.swift in Sources */,
 				B99F6E3390F2CB5DA6F201AF /* Collection+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

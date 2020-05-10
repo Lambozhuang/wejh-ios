@@ -6,7 +6,6 @@
 //  Copyright © 2020 Bunny Wong. All rights reserved.
 //
 
-
 extension Collection where Index == Int {
   func chunked(by chunkSize: Int) -> [[Element]] {
     stride(from: startIndex, to: endIndex, by: chunkSize).map {

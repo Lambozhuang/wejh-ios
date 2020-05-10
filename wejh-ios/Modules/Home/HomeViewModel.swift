@@ -58,26 +58,18 @@ final class HomeViewModel: ComplexViewModelType {
     ])
 
     let menu = HomeMenuViewModel(menuItems: [
-      MenuItemViewModel(name: "我的课表", imageName: "Images/menu-timetable"),
-      MenuItemViewModel(name: "我的成绩", imageName: "Images/menu-score"),
-      MenuItemViewModel(name: "考试安排", imageName: "Images/menu-exam"),
-      MenuItemViewModel(name: "我的借阅", imageName: "Images/menu-library"),
-      MenuItemViewModel(name: "校园卡", imageName: "Images/menu-card"),
-      MenuItemViewModel(name: "空闲教室", imageName: "Images/menu-classroom"),
+      MenuItem(name: "我的课表", imageName: "Images/menu-timetable"),
+      MenuItem(name: "我的成绩", imageName: "Images/menu-score"),
+      MenuItem(name: "考试安排", imageName: "Images/menu-exam"),
+      MenuItem(name: "我的借阅", imageName: "Images/menu-library"),
+      MenuItem(name: "校园卡", imageName: "Images/menu-card"),
+      MenuItem(name: "空闲教室", imageName: "Images/menu-classroom"),
 
-      MenuItemViewModel(name: "我的课表", imageName: "Images/menu-timetable"),
-      MenuItemViewModel(name: "我的成绩", imageName: "Images/menu-score"),
-      MenuItemViewModel(name: "考试安排", imageName: "Images/menu-exam"),
-      MenuItemViewModel(name: "我的借阅", imageName: "Images/menu-library"),
-      MenuItemViewModel(name: "校园卡", imageName: "Images/menu-card"),
-      MenuItemViewModel(name: "空闲教室", imageName: "Images/menu-classroom"),
-
-      MenuItemViewModel(name: "我的课表", imageName: "Images/menu-timetable"),
-      MenuItemViewModel(name: "我的成绩", imageName: "Images/menu-score"),
-      MenuItemViewModel(name: "考试安排", imageName: "Images/menu-exam"),
-      MenuItemViewModel(name: "我的借阅", imageName: "Images/menu-library"),
-      MenuItemViewModel(name: "校园卡", imageName: "Images/menu-card"),
-      MenuItemViewModel(name: "空闲教室", imageName: "Images/menu-classroom"),
+      MenuItem(name: "我的课表", imageName: "Images/menu-timetable"),
+      MenuItem(name: "考试安排", imageName: "Images/menu-exam"),
+      MenuItem(name: "我的借阅", imageName: "Images/menu-library"),
+      MenuItem(name: "校园卡", imageName: "Images/menu-card"),
+//      MenuItem(name: "空闲教室", imageName: "Images/menu-classroom"),
     ])
 
     return Output(presentWhatsNew: whatsNewTraits.asDriverOnErrorJustComplete(),

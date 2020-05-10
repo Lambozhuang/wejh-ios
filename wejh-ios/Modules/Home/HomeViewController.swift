@@ -119,7 +119,8 @@ extension HomeViewController: UITableViewDelegate {
   }
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 266
+    let height = menuView.getCalculatedHeight()
+    return height
   }
 
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

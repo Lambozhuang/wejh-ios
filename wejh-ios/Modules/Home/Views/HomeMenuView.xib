@@ -17,7 +17,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RFT-Ja-Bbm">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="226"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="26" minimumInteritemSpacing="18" id="LQZ-v2-wlK">
                                 <size key="itemSize" width="91" height="91"/>
@@ -27,7 +27,10 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Uih-83-qJN">
-                            <rect key="frame" x="0.0" y="229" width="414" height="37"/>
+                            <rect key="frame" x="0.0" y="226" width="414" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="n9a-Nf-0ou"/>
+                            </constraints>
                         </pageControl>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

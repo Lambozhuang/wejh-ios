@@ -22,12 +22,18 @@ final class HomeMenuView: UITableViewHeaderFooterView, InstantiableIdentifiable,
   @IBOutlet weak var menuCollectionView: UICollectionView!
   @IBOutlet weak var pageControl: UIPageControl!
 
+  var menuItemWidth: CGFloat = 91
+  var verticalGutter: CGFloat = 18
+  var horizontalGutter: CGFloat = 26
+  var topInset: CGFloat = 24
+
   override func awakeFromNib() {
     super.awakeFromNib()
 
     containerView.backgroundColor = UIColor.Home.backgroundElevated
     menuCollectionView.backgroundColor = .clear
     menuCollectionView.registerCell(HomeMenuItemCell.self)
+    menuCollectionView.registerCell(HomeMenuItemEmptyCell.self)
     menuCollectionView.delegate = self
     menuCollectionView.showsHorizontalScrollIndicator = false
   }
@@ -43,10 +49,15 @@ final class HomeMenuView: UITableViewHeaderFooterView, InstantiableIdentifiable,
     }
 
     let dataSource = RxCollectionViewSectionedReloadDataSource<HomeMenuViewModel.PagedMenuItems>(configureCell: { _, collectionView, indexPath, item in
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMenuItemCell.reuseIdentifier, for: indexPath) as! HomeMenuItemCell
-      cell.itemLabel.text = item.name + String(indexPath.row)
-      cell.itemImageView.image = UIImage(named: item.imageName)
-      return cell
+      switch item {
+      case .item(let name, let imageName):
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMenuItemCell.reuseIdentifier, for: indexPath) as! HomeMenuItemCell
+        cell.itemLabel.text = name + String(indexPath.row)
+        cell.itemImageView.image = UIImage(named: imageName)
+        return cell
+      case .empty:
+        return collectionView.dequeueReusableCell(withReuseIdentifier: HomeMenuItemEmptyCell.reuseIdentifier, for: indexPath)
+      }
     })
 
     let output = viewModel.transform(input: ViewModel.Input())
@@ -61,6 +72,14 @@ final class HomeMenuView: UITableViewHeaderFooterView, InstantiableIdentifiable,
     menuCollectionView.collectionViewLayout.invalidateLayout()
   }
 
+  func getCalculatedHeight() -> CGFloat{
+    var height = topInset + pageControl.bounds.height
+    if let itemsPerColumn = viewModel?.itemsPerColumn {
+      height += CGFloat(itemsPerColumn) * menuItemWidth + CGFloat(itemsPerColumn - 1) * verticalGutter
+    }
+    return height
+  }
+
 }
 
 extension HomeMenuView: UICollectionViewDelegateFlowLayout {
@@ -70,23 +89,23 @@ extension HomeMenuView: UICollectionViewDelegateFlowLayout {
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: 91, height: 91)
+    return CGSize(width: menuItemWidth, height: menuItemWidth)
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    guard let viewModel = viewModel else {
-      return UIEdgeInsets.zero
+    var inset: CGFloat = 0
+    if let itemsPerRow = viewModel?.itemsPerRow  {
+      inset = (collectionView.bounds.width - CGFloat(itemsPerRow - 1) * horizontalGutter - CGFloat(itemsPerRow) * menuItemWidth) / 2.0
     }
-    let inset = (collectionView.bounds.width - CGFloat(viewModel.itemsPerRow - 1) * 26.0 - CGFloat(viewModel.itemsPerRow) * 91.0) / 2.0
-    return UIEdgeInsets(top: 24, left: inset, bottom: 0, right: inset)
+    return UIEdgeInsets(top: topInset, left: inset, bottom: 0, right: inset)
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return 26
+    return horizontalGutter
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return 18
+    return verticalGutter
   }
 
 }
