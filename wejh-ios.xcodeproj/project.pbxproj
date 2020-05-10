@@ -17,6 +17,7 @@
 		713A2DF8245C70F50006DB35 /* whats-new.json in Resources */ = {isa = PBXBuildFile; fileRef = 713A2DFA245C70F50006DB35 /* whats-new.json */; };
 		713E11F024619C3800596290 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 713E11EE24619C3800596290 /* Localizable.strings */; };
 		713E11F324619C6500596290 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713E11F224619C6500596290 /* String+Localized.swift */; };
+		713F4B18246841FD00ADB9C0 /* DotsPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F4B17246841FD00ADB9C0 /* DotsPatternView.swift */; };
 		71482175245ECBAA007A476A /* UIColor+Wejh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71482174245ECBAA007A476A /* UIColor+Wejh.swift */; };
 		71484BBC245E746100A4B3B6 /* UIScreen+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */; };
 		71484BBE245E820000A4B3B6 /* InterfaceStylePreferenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484BBD245E820000A4B3B6 /* InterfaceStylePreferenceService.swift */; };
@@ -43,7 +44,7 @@
 		B99F61DC747F15A49DEF07A0 /* NavigableControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F67D8CD05C2868BC0E541 /* NavigableControllerType.swift */; };
 		B99F621B78577E29B99A357B /* HomeTodayCellCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99F681F4B148CDCA957CD81 /* HomeTodayCellCard.xib */; };
 		B99F63BF3FA93C2FC79A1D29 /* HomeTodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F68E230A1CF26E1396049 /* HomeTodayCell.swift */; };
-		B99F65197937FEFE8A33E471 /* SquareBlocksPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F6A4E57FF50484363EB5A /* SquareBlocksPatternView.swift */; };
+		B99F65197937FEFE8A33E471 /* BlocksPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F6A4E57FF50484363EB5A /* BlocksPatternView.swift */; };
 		B99F66CA857C1E84F5E13642 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F6C88B6DFDFC816B442DE /* ViewModelBindableType.swift */; };
 		B99F673BC27E7BB88EAA0DE4 /* HomeTodayCellTimetable.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99F6D8EFE83D2011468A703 /* HomeTodayCellTimetable.xib */; };
 		B99F67DA588C16ED5924B324 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F6332E56AB96D8E9EE6BD /* NibInstantiable.swift */; };
@@ -70,6 +71,7 @@
 		713E11EF24619C3800596290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		713E11F124619C3E00596290 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		713E11F224619C6500596290 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		713F4B17246841FD00ADB9C0 /* DotsPatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsPatternView.swift; sourceTree = "<group>"; };
 		71482174245ECBAA007A476A /* UIColor+Wejh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Wejh.swift"; sourceTree = "<group>"; };
 		71484BBB245E746100A4B3B6 /* UIScreen+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Rx.swift"; sourceTree = "<group>"; };
 		71484BBD245E820000A4B3B6 /* InterfaceStylePreferenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceStylePreferenceService.swift; sourceTree = "<group>"; };
@@ -104,7 +106,7 @@
 		B99F67D8CD05C2868BC0E541 /* NavigableControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigableControllerType.swift; sourceTree = "<group>"; };
 		B99F681F4B148CDCA957CD81 /* HomeTodayCellCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTodayCellCard.xib; sourceTree = "<group>"; };
 		B99F68E230A1CF26E1396049 /* HomeTodayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTodayCell.swift; sourceTree = "<group>"; };
-		B99F6A4E57FF50484363EB5A /* SquareBlocksPatternView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareBlocksPatternView.swift; sourceTree = "<group>"; };
+		B99F6A4E57FF50484363EB5A /* BlocksPatternView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlocksPatternView.swift; sourceTree = "<group>"; };
 		B99F6C283DD5D96402E52F28 /* HomeTodayCellTimetableEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTodayCellTimetableEventCell.xib; sourceTree = "<group>"; };
 		B99F6C88B6DFDFC816B442DE /* ViewModelBindableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
 		B99F6D8EFE83D2011468A703 /* HomeTodayCellTimetable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTodayCellTimetable.xib; sourceTree = "<group>"; };
@@ -322,7 +324,8 @@
 		B99F63E0C3EFCD7972D99300 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B99F6A4E57FF50484363EB5A /* SquareBlocksPatternView.swift */,
+				B99F6A4E57FF50484363EB5A /* BlocksPatternView.swift */,
+				713F4B17246841FD00ADB9C0 /* DotsPatternView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				71CAD340245EFFC500F0B3BB /* UIColor+HexValues.swift in Sources */,
 				B99F61DC747F15A49DEF07A0 /* NavigableControllerType.swift in Sources */,
 				719E53A124604C2000186C98 /* UserViewController.swift in Sources */,
+				713F4B18246841FD00ADB9C0 /* DotsPatternView.swift in Sources */,
 				B99F6F00C4FC32932B46FDE0 /* ReusableIdentifiableView.swift in Sources */,
 				B99F67DA588C16ED5924B324 /* NibInstantiable.swift in Sources */,
 				B99F63BF3FA93C2FC79A1D29 /* HomeTodayCell.swift in Sources */,
@@ -555,7 +559,7 @@
 				B99F6D1CC096BA2BB5636AB4 /* ViewModelType.swift in Sources */,
 				B99F66CA857C1E84F5E13642 /* ViewModelBindableType.swift in Sources */,
 				B99F697037030E01F7193020 /* HomeMenuItemCell.swift in Sources */,
-				B99F65197937FEFE8A33E471 /* SquareBlocksPatternView.swift in Sources */,
+				B99F65197937FEFE8A33E471 /* BlocksPatternView.swift in Sources */,
 				715A70422467C025000448AB /* HomeMenuItemEmptyCell.swift in Sources */,
 				B99F6E3390F2CB5DA6F201AF /* Collection+Extensions.swift in Sources */,
 			);

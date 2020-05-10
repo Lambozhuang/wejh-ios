@@ -22,6 +22,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTZ-LF-CGA">
                                 <rect key="frame" x="0.0" y="0.0" width="366" height="132"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42b-Wn-JbQ" customClass="DotsPatternView" customModule="wejh_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44" width="366" height="88"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="7XI-K1-UDa"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmj-f3-KwH">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
                                         <subviews>
@@ -97,10 +104,13 @@
                                     <constraint firstAttribute="trailing" secondItem="P88-Rz-EZ9" secondAttribute="trailing" id="8Gc-Gh-Uyw"/>
                                     <constraint firstItem="gmj-f3-KwH" firstAttribute="leading" secondItem="FTZ-LF-CGA" secondAttribute="leading" id="BfJ-Iu-6TR"/>
                                     <constraint firstAttribute="bottom" secondItem="P88-Rz-EZ9" secondAttribute="bottom" id="BiH-1Q-oqj"/>
+                                    <constraint firstAttribute="bottom" secondItem="42b-Wn-JbQ" secondAttribute="bottom" id="Hhf-09-aGb"/>
                                     <constraint firstItem="P88-Rz-EZ9" firstAttribute="leading" secondItem="FTZ-LF-CGA" secondAttribute="leading" id="PWX-cs-ze8"/>
                                     <constraint firstItem="gmj-f3-KwH" firstAttribute="top" secondItem="FTZ-LF-CGA" secondAttribute="top" id="Xfz-7L-ztO"/>
+                                    <constraint firstAttribute="trailing" secondItem="42b-Wn-JbQ" secondAttribute="trailing" id="dfQ-Bd-yNS"/>
                                     <constraint firstItem="P88-Rz-EZ9" firstAttribute="top" secondItem="gmj-f3-KwH" secondAttribute="bottom" id="gZl-MR-qXa"/>
                                     <constraint firstItem="P88-Rz-EZ9" firstAttribute="top" secondItem="gmj-f3-KwH" secondAttribute="bottom" id="hS2-YM-ZBt"/>
+                                    <constraint firstItem="42b-Wn-JbQ" firstAttribute="leading" secondItem="FTZ-LF-CGA" secondAttribute="leading" id="lvY-G0-hyf"/>
                                     <constraint firstAttribute="trailing" secondItem="gmj-f3-KwH" secondAttribute="trailing" id="xQ8-Hp-nmy"/>
                                 </constraints>
                             </view>

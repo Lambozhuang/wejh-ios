@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SquareBlocksPatternView: UIView {
+class BlocksPatternView: UIView {
 
   struct Configuration {
 
@@ -101,6 +101,7 @@ class SquareBlocksPatternView: UIView {
   override func layoutSubviews() {
     super.layoutSubviews()
     maskLayer.frame = bounds
+    setNeedsDisplay()
   }
 
 }
