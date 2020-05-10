@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="15A-69-xs0" customClass="HomeMenuView" customModule="wejh_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unN-Nf-goS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RFT-Ja-Bbm">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="26" minimumInteritemSpacing="18" id="LQZ-v2-wlK">
+                                <size key="itemSize" width="91" height="91"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="24" minY="24" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Uih-83-qJN">
+                            <rect key="frame" x="0.0" y="229" width="414" height="37"/>
+                        </pageControl>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="RFT-Ja-Bbm" firstAttribute="top" secondItem="unN-Nf-goS" secondAttribute="top" id="3Qf-lI-DD5"/>
+                        <constraint firstItem="RFT-Ja-Bbm" firstAttribute="leading" secondItem="unN-Nf-goS" secondAttribute="leading" id="ASe-7u-l9N"/>
+                        <constraint firstAttribute="bottom" secondItem="Uih-83-qJN" secondAttribute="bottom" id="bsZ-qN-Iao"/>
+                        <constraint firstAttribute="trailing" secondItem="Uih-83-qJN" secondAttribute="trailing" id="egz-qh-dUH"/>
+                        <constraint firstAttribute="trailing" secondItem="RFT-Ja-Bbm" secondAttribute="trailing" id="ita-Cc-TPC"/>
+                        <constraint firstItem="Uih-83-qJN" firstAttribute="leading" secondItem="unN-Nf-goS" secondAttribute="leading" id="ixW-mQ-FkS"/>
+                        <constraint firstItem="Uih-83-qJN" firstAttribute="top" secondItem="RFT-Ja-Bbm" secondAttribute="bottom" id="v9a-M3-Gm6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="unN-Nf-goS" secondAttribute="bottom" id="MHq-JB-spi"/>
+                <constraint firstItem="unN-Nf-goS" firstAttribute="leading" secondItem="15A-69-xs0" secondAttribute="leading" id="TgQ-OO-9Yp"/>
+                <constraint firstItem="unN-Nf-goS" firstAttribute="top" secondItem="15A-69-xs0" secondAttribute="top" id="lDY-Zh-5TM"/>
+                <constraint firstAttribute="trailing" secondItem="unN-Nf-goS" secondAttribute="trailing" id="z6B-Mc-bID"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="unN-Nf-goS" id="9A6-pC-Jt7"/>
+                <outlet property="menuCollectionView" destination="RFT-Ja-Bbm" id="OMC-6y-IW7"/>
+                <outlet property="pageControl" destination="Uih-83-qJN" id="TK8-eF-ZFq"/>
+            </connections>
+            <point key="canvasLocation" x="-1091" y="-627"/>
+        </view>
+    </objects>
+</document>

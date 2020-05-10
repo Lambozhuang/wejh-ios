@@ -131,7 +131,7 @@
                 <outlet property="titleLabel" destination="amQ-2v-ZGm" id="4ZU-Pi-Rca"/>
                 <outlet property="updatedLabel" destination="3p1-1q-qMI" id="EOw-w7-Svp"/>
             </connections>
-            <point key="canvasLocation" x="-259" y="34"/>
+            <point key="canvasLocation" x="-488" y="106"/>
         </tableViewCell>
     </objects>
 </document>

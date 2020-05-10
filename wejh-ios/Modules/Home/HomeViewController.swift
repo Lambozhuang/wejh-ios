@@ -13,43 +13,24 @@ import RxViewController
 import NSObject_Rx
 import RxDataSources
 
-extension UIColor {
-
-  static var homeBackgroundElevated: UIColor = {
-    return UIColor("#F3E6E3", displayP3: true)
-  }()
-
-  static var homeBackgroundLower: UIColor = {
-    return UIColor("#F8EEEC", displayP3: true)
-  }()
-
-}
-
 final class HomeViewController: BaseViewController<HomeViewModel> {
 
   private var tableView: UITableView!
+  private lazy var menuView: HomeMenuView! = {
+    if let nib = Bundle.main.loadNibNamed(HomeMenuView.nibName, owner: self) {
+       return nib.first as? HomeMenuView
+    }
+    return nil
+  }()
 
   private var navigationButtonLogo: UIBarButtonItem!
   private var navigationButtonUser: UIBarButtonItem!
 
   override func setupUI() {
-    tableView = UITableView(frame: .zero, style: .grouped)
-
-    tableView.separatorColor = .clear
-    tableView.backgroundColor = .clear
-
-    view.addSubview(tableView)
-    tableView.snp.makeConstraints { constraint in
-      constraint.trailing.equalTo(self.view)
-      constraint.leading.equalTo(self.view)
-      constraint.top.equalTo(self.view.safeAreaLayoutGuide)
-      constraint.bottom.equalTo(self.view.safeAreaLayoutGuide)
-    }
-
-    view.backgroundColor = .homeBackgroundLower
+    view.backgroundColor = UIColor.Home.backgroundLower
     title = "微精弘"
 
-    configureNavigationBarAppearance(enforceLargeTitle: true, backgroundColor: .homeBackgroundElevated, tintColor: .primaryBlack)
+    configureNavigationBarAppearance(enforceLargeTitle: true, backgroundColor: UIColor.Home.backgroundElevated, tintColor: .primaryBlack)
 
     navigationButtonLogo = UIBarButtonItem(image: UIImage(named: "Images/nav-logo"), style: .plain, target: nil, action: nil)
     navigationButtonUser = UIBarButtonItem(image: UIImage(named: "Images/nav-user"), style: .plain, target: nil, action: nil)
@@ -57,10 +38,7 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
     navigationItem.rightBarButtonItem = navigationButtonUser
     navigationItem.leftBarButtonItem = navigationButtonLogo
 
-    tableView.register(SectionHeaderView.self)
-
-    tableView.register(HomeTodayCellTimetable.self)
-    tableView.register(HomeTodayCellCard.self)
+    setupTableView()
   }
 
   override func bindToViewModel() {
@@ -92,15 +70,43 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeTodayCellCard.reuseIdentifier) as! HomeTodayCellCard
         cell.connect(viewModel: cardViewModel)
         return cell
+      } else if let timeTableViewModel = item as? HomeTodayCellTimetableViewModel {
+        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTodayCellTimetable.reuseIdentifier) as! HomeTodayCellTimetable
+        cell.connect(viewModel: timeTableViewModel)
+        return cell
       } else {
         fatalError("Unrecognized cell type")
       }
     })
 
-    tableView.rx.setDelegate(self).disposed(by: rx.disposeBag)
+    output.menu.drive(onNext: { [weak self] menuViewModel in
+      self?.menuView.connect(viewModel: menuViewModel)
+    }).disposed(by: rx.disposeBag)
 
+    /// Table view is setup and added in `viewDidLoad` call, we delay the data binding to the next runloop.
     DispatchQueue.main.async {
-      output.todaySecion.asObservable().bind(to: self.tableView.rx.items(dataSource: dataSource)).disposed(by: self.rx.disposeBag)
+      self.tableView.rx.setDelegate(self).disposed(by: self.rx.disposeBag)
+      output.todaySection.asObservable().bind(to: self.tableView.rx.items(dataSource: dataSource)).disposed(by: self.rx.disposeBag)
+    }
+  }
+
+  private func setupTableView() {
+    tableView = UITableView(frame: .zero, style: .plain)
+
+    tableView.separatorColor = .clear
+    tableView.backgroundColor = .clear
+    tableView.allowsSelection = false
+
+    tableView.registerHeaderFooter(HomeMenuView.self)
+    tableView.registerCell(HomeTodayCellTimetable.self)
+    tableView.registerCell(HomeTodayCellCard.self)
+
+    view.addSubview(tableView)
+    tableView.snp.makeConstraints { constraint in
+      constraint.trailing.equalTo(self.view)
+      constraint.leading.equalTo(self.view)
+      constraint.top.equalTo(self.view.safeAreaLayoutGuide)
+      constraint.bottom.equalTo(self.view.safeAreaLayoutGuide)
     }
   }
 
@@ -108,8 +114,20 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
 
 extension HomeViewController: UITableViewDelegate {
 
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    return menuView
+  }
+
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 266
+  }
+
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 156.0
+    if indexPath.row == 0 {
+      return 156
+    } else {
+      return UITableView.automaticDimension
+    }
   }
 
 }

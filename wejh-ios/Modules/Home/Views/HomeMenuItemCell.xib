@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="24w-ra-YKp" customClass="HomeMenuItemCell" customModule="wejh_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kIT-t6-gJ5">
+                <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2m-cG-h6u">
+                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvP-K7-N66">
+                                <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YJR-eq-014">
+                                        <rect key="frame" x="16" y="8" width="59" height="59"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="YJR-eq-014" secondAttribute="height" id="WQG-HZ-rvi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-AK-ipR">
+                                        <rect key="frame" x="32" y="68" width="27" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="AzD-AK-ipR" firstAttribute="centerX" secondItem="XvP-K7-N66" secondAttribute="centerX" id="Oan-o2-Rce"/>
+                                    <constraint firstAttribute="bottom" secondItem="AzD-AK-ipR" secondAttribute="bottom" constant="8" id="b0b-ab-wiK"/>
+                                    <constraint firstItem="YJR-eq-014" firstAttribute="leading" secondItem="XvP-K7-N66" secondAttribute="leading" constant="16" id="gnh-Nd-xgt"/>
+                                    <constraint firstItem="YJR-eq-014" firstAttribute="top" secondItem="XvP-K7-N66" secondAttribute="top" constant="8" id="idA-lq-msa"/>
+                                    <constraint firstAttribute="trailing" secondItem="YJR-eq-014" secondAttribute="trailing" constant="16" id="u6X-nq-294"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XvP-K7-N66" secondAttribute="trailing" id="9qR-rv-Yww"/>
+                            <constraint firstItem="XvP-K7-N66" firstAttribute="leading" secondItem="W2m-cG-h6u" secondAttribute="leading" id="ay1-2c-HIm"/>
+                            <constraint firstItem="XvP-K7-N66" firstAttribute="top" secondItem="W2m-cG-h6u" secondAttribute="top" id="dum-vX-0Pk"/>
+                            <constraint firstAttribute="bottom" secondItem="XvP-K7-N66" secondAttribute="bottom" id="ivE-Oz-Dsy"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="W2m-cG-h6u" secondAttribute="bottom" id="BMc-XN-eVv"/>
+                    <constraint firstItem="W2m-cG-h6u" firstAttribute="top" secondItem="kIT-t6-gJ5" secondAttribute="top" id="Jt0-bx-g1e"/>
+                    <constraint firstAttribute="trailing" secondItem="W2m-cG-h6u" secondAttribute="trailing" id="Trz-9H-PFE"/>
+                    <constraint firstItem="W2m-cG-h6u" firstAttribute="leading" secondItem="kIT-t6-gJ5" secondAttribute="leading" id="rdu-Lp-xaP"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="91" height="91"/>
+            <connections>
+                <outlet property="containerView" destination="XvP-K7-N66" id="Uuu-dF-6Mp"/>
+                <outlet property="itemImageView" destination="YJR-eq-014" id="7Ds-Rr-xJZ"/>
+                <outlet property="itemLabel" destination="AzD-AK-ipR" id="sQf-1P-Gk7"/>
+                <outlet property="shadowView" destination="W2m-cG-h6u" id="qP0-6B-TiW"/>
+            </connections>
+            <point key="canvasLocation" x="-619.56521739130437" y="-431.58482142857139"/>
+        </collectionViewCell>
+    </objects>
+</document>

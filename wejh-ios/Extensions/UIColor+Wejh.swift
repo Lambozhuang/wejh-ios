@@ -10,16 +10,15 @@ import UIKit
 
 extension UIColor {
 
-  static var primaryPink: UIColor = {
-    return UIColor("#D96891", displayP3: true)
-  }()
+  static let primaryPink = UIColor("#D96891", displayP3: true)
+  static let primaryBlack = UIColor("#252450", displayP3: true)
+  static let shadowBlack = UIColor("#2D2C4E", displayP3: true)
 
-  static var primaryBlack: UIColor = {
-    return UIColor("#252450", displayP3: true)
-  }()
+  struct Home {
 
-  static var shadowBlack: UIColor = {
-    return UIColor("#2D2C4E", displayP3: true)
-  }()
+    static let backgroundElevated = UIColor("#F3E6E3", displayP3: true)
+    static var backgroundLower = UIColor("#F8EEEC", displayP3: true)
+
+  }
 
 }
